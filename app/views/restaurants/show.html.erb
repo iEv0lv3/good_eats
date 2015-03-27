@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="large-12">
+    <h1>Restaurant Details: <%= @restaurant.name %></h1>
+
+    <div>
+      <ul>
+        <li>Restaurant Name: <%= @restaurant.name %></li>
+        <li>City: <%= @restaurant.city %></li>
+        <li>State: <%= @restaurant.state %></li>
+        <li>Zip: <%= @restaurant.zip %></li>
+        </br>
+
+        <h1>Review</h1>
+        <li>Rating: <%= @review.rating %></li>
+        <li>What I Thought: <%= @review.body %></li>
+        <%= link_to 'View Reviews', restaurant_reviews_path(@restaurant) %>
+      </ul>
+    </div>
+
+  <%= link_to 'Add a Review', new_restaurant_review_path(@restaurant) %>
+  </br>
+  <%= link_to 'Restaurants List', restaurants_path %>
+  </div>
+</div>
